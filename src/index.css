@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #e8e4f3 0%, #f5f3f9 100%);
+  min-height: 100vh;
+  font-size: 15px;
+}

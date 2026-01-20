@@ -1,0 +1,139 @@
+.header {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #8b7fb8;
+}
+
+.logo-icon {
+  font-size: 26px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 5px;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-item {
+  background: transparent;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #6b6b6b;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-item:hover {
+  background: rgba(139, 127, 184, 0.1);
+  color: #8b7fb8;
+}
+
+.nav-item:hover .dropdown-menu,
+.nav-item:focus-within .dropdown-menu {
+  display: block;
+}
+
+.nav-icon {
+  font-size: 18px;
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  margin-left: 2px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+  padding: 8px 0;
+  z-index: 9999;
+  margin-top: 5px;
+}
+
+.dropdown-menu.open {
+  display: block;
+}
+
+.dropdown-item {
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #6b6b6b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.dropdown-item:hover {
+  background: rgba(139, 127, 184, 0.1);
+  color: #8b7fb8;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.data-campaign-btn {
+  background: linear-gradient(135deg, #8b7fb8 0%, #a89dc9 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.data-campaign-btn:hover {
+  transform: translateY(-2px);
+}
+
+.user-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-item.active {
+  background: rgba(139, 127, 184, 0.2);
+  color: #8b7fb8;
+  font-weight: 600;
+}
