@@ -1,0 +1,341 @@
+.swal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: swal-overlay-show 0.3s;
+}
+
+@keyframes swal-overlay-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.swal-modal {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  animation: swal-modal-show 0.3s;
+  text-align: center;
+}
+
+@keyframes swal-modal-show {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.swal-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 20px 0 10px;
+}
+
+.swal-text {
+  font-size: 16px;
+  color: #718096;
+  margin: 10px 0 30px;
+  line-height: 1.5;
+}
+
+.swal-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.swal-button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 100px;
+}
+
+.swal-button-confirm {
+  background: #667eea;
+  color: white;
+}
+
+.swal-button-confirm:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.swal-button-cancel {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+.swal-button-cancel:hover {
+  background: #cbd5e0;
+}
+
+/* Icons */
+.swal-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  position: relative;
+}
+
+/* Success Icon */
+.swal-success {
+  border: 4px solid #3dfa8c;
+  border-radius: 50%;
+  position: relative;
+  animation: swal-success-animate 0.75s;
+}
+
+@keyframes swal-success-animate {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.swal-success-line-tip {
+  height: 5px;
+  background-color: #48bb78;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 2;
+  width: 25px;
+  top: 46px;
+  left: 14px;
+  transform: rotate(45deg);
+  animation: swal-success-line-tip 0.75s;
+}
+
+@keyframes swal-success-line-tip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px;
+  }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px;
+  }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px;
+  }
+}
+
+.swal-success-line-long {
+  height: 5px;
+  background-color: #48bb78;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 2;
+  width: 47px;
+  top: 38px;
+  right: 8px;
+  transform: rotate(-45deg);
+  animation: swal-success-line-long 0.75s;
+}
+
+@keyframes swal-success-line-long {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  84% {
+    width: 55px;
+    right: 0;
+    top: 35px;
+  }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px;
+  }
+}
+
+.swal-success-ring {
+  width: 80px;
+  height: 80px;
+  border: 4px solid rgba(72, 187, 120, 0.2);
+  border-radius: 50%;
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  z-index: 2;
+}
+
+/* Error Icon */
+.swal-error {
+  border: 4px solid #f56565;
+  border-radius: 50%;
+  animation: swal-error-animate 0.5s;
+}
+
+@keyframes swal-error-animate {
+  0% {
+    transform: scale(0) rotate(45deg);
+  }
+  100% {
+    transform: scale(1) rotate(45deg);
+  }
+}
+
+.swal-error-x {
+  position: relative;
+  display: block;
+}
+
+.swal-error-line-left,
+.swal-error-line-right {
+  height: 5px;
+  background-color: #f56565;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  top: 37px;
+  width: 47px;
+}
+
+.swal-error-line-left {
+  left: 17px;
+  transform: rotate(45deg);
+  animation: swal-error-line-left 0.5s;
+}
+
+@keyframes swal-error-line-left {
+  0% {
+    left: 82px;
+    width: 0;
+  }
+  100% {
+    left: 17px;
+    width: 47px;
+  }
+}
+
+.swal-error-line-right {
+  right: 16px;
+  transform: rotate(-45deg);
+  animation: swal-error-line-right 0.5s;
+}
+
+@keyframes swal-error-line-right {
+  0% {
+    right: 82px;
+    width: 0;
+  }
+  100% {
+    right: 16px;
+    width: 47px;
+  }
+}
+
+/* Warning Icon */
+.swal-warning {
+  border: 4px solid #f6ad55;
+  border-radius: 50%;
+  animation: swal-warning-animate 0.5s;
+}
+
+@keyframes swal-warning-animate {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.swal-warning-body {
+  width: 5px;
+  height: 35px;
+  background-color: #f6ad55;
+  border-radius: 2px;
+  margin: 10px auto;
+  display: block;
+}
+
+.swal-warning-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #f6ad55;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Info Icon */
+.swal-info {
+  border: 4px solid #4299e1;
+  border-radius: 50%;
+  animation: swal-info-animate 0.5s;
+}
+
+@keyframes swal-info-animate {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.swal-info-body {
+  width: 5px;
+  height: 35px;
+  background-color: #4299e1;
+  border-radius: 2px;
+  margin: 25px auto 5px;
+  display: block;
+  font-size: 40px;
+  font-weight: bold;
+  color: #4299e1;
+  line-height: 1;
+}
